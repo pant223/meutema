@@ -96,6 +96,7 @@
     border: 1px solid #eee;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
+    transition: all 0.5s ease;
   }
 
   .personalizacao-container label {
@@ -138,9 +139,20 @@
   .personalizacao-container button:hover {
     background-color: #333;
   }
+
+  .mensagem-sucesso {
+    display: none;
+    padding: 15px;
+    background-color: #e7f9e7;
+    color: #0a6b0a;
+    border: 1px solid #c6e6c6;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
 </style>
 
-<div class="personalizacao-container">
+<div id="bloco-personalizacao" class="personalizacao-container">
   <h3>Personalize seu tapete</h3>
 
   <!-- Marca -->
@@ -226,9 +238,32 @@
   <input type="text" id="modelo" name="properties[Modelo]" placeholder="Digite o modelo" required />
 
   <!-- Botão Confirmar -->
-  <button type="submit">Confirmar</button>
+  <button type="button" onclick="confirmarPersonalizacao()">Confirmar</button>
 </div>
 
+<!-- Mensagem de sucesso -->
+<div id="mensagem-sucesso" class="mensagem-sucesso">
+  ✅ Veículo selecionado com sucesso!
+</div>
+
+<script>
+  function confirmarPersonalizacao() {
+    const marca = document.getElementById('marca').value;
+    const ano = document.getElementById('ano').value;
+    const modelo = document.getElementById('modelo').value;
+
+    if (marca === "" || ano === "" || modelo === "") {
+      alert("Por favor, preencha todas as informações antes de confirmar.");
+      return;
+    }
+
+    // Oculta a caixa de personalização
+    document.getElementById('bloco-personalizacao').style.display = 'none';
+
+    // Mostra a mensagem de sucesso
+    document.getElementById('mensagem-sucesso').style.display = 'block';
+  }
+</script>
 
 
 {% endif %}
