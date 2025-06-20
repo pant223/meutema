@@ -95,12 +95,15 @@
           {%- endif -%}
         {%- else -%}
           {%- if product.description != blank -%}
+
+        56
+            
             <div class="product-info__description" {{ block.shopify_attributes }}>
               <div class="prose">
                 {{- product.description -}}
               </div>
             
-            56
+          
             
             </div>
           {%- endif -%}
