@@ -89,7 +89,7 @@
       
       {%- when 'description' -%}
 
-       56
+      
         {%- if block.settings.collapse_content -%}
           {%- if product.description != blank -%}
             {%- capture accordion_title -%}{{ 'product.general.description' | t }}{%- endcapture -%}
@@ -99,7 +99,7 @@
 
             {%- render 'accordion', title: accordion_title, content: accordion_content, class: 'product-info__accordion', block: block -%}
 
-              56
+            
             
           {%- endif -%}
         {%- else -%}
