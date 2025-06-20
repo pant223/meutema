@@ -37,11 +37,13 @@
         "slide-2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Story_do_Instagram_azul_promocional_para_divulgar_cupom_de_boas-vindas.png",
+            "mobile_image": "shopify://shop_images/Story_do_Instagram_azul_promocional_para_divulgar_cupom_de_boas-vindas.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "Tell your story",
-            "title": "Slide title",
+            "subheading": "",
+            "title": "",
             "heading_tag": "h0",
             "button_text": "",
             "button_link": "",
