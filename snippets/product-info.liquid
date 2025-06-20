@@ -89,33 +89,24 @@
       
   {% if product.handle == 'kit-tapetes-automotivos-sob-medida-de-luxo-tapetes-sobrepostos-conforto-e-estilo-exclusivo-para-seu-carro' %}
 <style>
-  .filtro-container {
+  .personalizacao-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 12px;
-    max-width: 500px;
-    margin: 20px auto;
-    color: #000;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid #eee;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
   }
 
-  .filtro-container h3 {
-    margin-bottom: 15px;
-    color: #111;
-    font-size: 20px;
-  }
-
-  .filtro-container label {
+  .personalizacao-container label {
     display: block;
     margin-bottom: 5px;
     font-weight: 600;
     color: #111;
   }
 
-  .filtro-container select,
-  .filtro-container input {
+  .personalizacao-container select,
+  .personalizacao-container input {
     width: 100%;
     padding: 10px 14px;
     border-radius: 8px;
@@ -123,69 +114,50 @@
     background-color: #f9f9f9;
     color: #000;
     margin-bottom: 15px;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     transition: border-color 0.3s;
   }
 
-  .filtro-container select:focus,
-  .filtro-container input:focus {
+  .personalizacao-container select:focus,
+  .personalizacao-container input:focus {
     outline: none;
     border-color: #111;
   }
-
-  .filtro-container button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background-color: #111;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: 600;
-  }
-
-  .filtro-container button:hover {
-    background-color: #333;
-  }
 </style>
-<div class="filtro-container">
-  <div class="filtro-container">
-  <h3>Escolha seu veículo</h3>
 
-  <!-- Dropdown Marca -->
-  <label for="marca">Marca</label>
-  <select id="marca" name="marca" required>
+<div class="personalizacao-container">
+  <h3>Personalize seu tapete</h3>
+
+  <!-- Marca -->
+  <label for="marca">Marca *</label>
+  <select id="marca" name="properties[Marca]" required>
     <option value="">Selecione a marca</option>
-    <option value="Fiat">Fiat</option>
-    <option value="Volkswagen">Volkswagen</option>
-    <option value="Ford">Ford</option>
-    <option value="Renault">Renault</option>
-    <option value="Toyota">Toyota</option>
-    <option value="Honda">Honda</option>
-    <option value="Hyundai">Hyundai</option>
-    <option value="Peugeot">Peugeot</option>
-    <option value="Citroën">Citroën</option>
-    <option value="Suzuki">Suzuki</option>
-    <option value="Mitsubishi">Mitsubishi</option>
-    <option value="JAC Motors">JAC Motors</option>
-    <option value="Caoa Chery">Caoa Chery</option>
-    <option value="Audi">Audi</option>
-    <option value="BMW">BMW</option>
-    <option value="Mercedes-Benz">Mercedes-Benz</option>
-    <option value="Volvo">Volvo</option>
-    <option value="Land Rover">Land Rover</option>
-    <option value="Ram">Ram</option>
-    <option value="BYD">BYD</option>
+    <option>Fiat</option>
+    <option>Volkswagen</option>
+    <option>Ford</option>
+    <option>Renault</option>
+    <option>Toyota</option>
+    <option>Honda</option>
+    <option>Hyundai</option>
+    <option>Peugeot</option>
+    <option>Citroën</option>
+    <option>Suzuki</option>
+    <option>Mitsubishi</option>
+    <option>JAC Motors</option>
+    <option>Caoa Chery</option>
+    <option>Audi</option>
+    <option>BMW</option>
+    <option>Mercedes-Benz</option>
+    <option>Volvo</option>
+    <option>Land Rover</option>
+    <option>Ram</option>
+    <option>BYD</option>
   </select>
 
-  <!-- Dropdown Ano -->
-  <label for="ano">Ano de Fabricação</label>
-  <select id="ano" name="ano" required>
+  <!-- Ano -->
+  <label for="ano">Ano de Fabricação *</label>
+  <select id="ano" name="properties[Ano de Fabricação]" required>
     <option value="">Selecione o ano</option>
-    <!-- Geração dinâmica dos anos -->
+    <!-- Geração dos anos -->
     <script>
       const anoSelect = document.currentScript.parentElement.querySelector("#ano");
       for (let i = 2025; i >= 1980; i--) {
@@ -197,14 +169,11 @@
     </script>
   </select>
 
-  <!-- Input Modelo -->
-  <label for="modelo">Modelo do Carro</label>
-  <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo" required />
+  <!-- Modelo -->
+  <label for="modelo">Modelo do Carro *</label>
+  <input type="text" id="modelo" name="properties[Modelo]" placeholder="Digite o modelo" required />
+</div>
 
-  <!-- Botão Enviar (ou ação) -->
-  <button type="submit">Buscar Produto</button>
-</div>
-</div>
 
 {% endif %}
   <!-- FIM DO BOTÃO -->    
