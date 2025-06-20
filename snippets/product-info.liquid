@@ -88,6 +88,7 @@
       <!-- INICIO DO BOTÃO -->  
       
   {% if product.handle == 'kit-tapetes-automotivos-sob-medida-de-luxo-tapetes-sobrepostos-conforto-e-estilo-exclusivo-para-seu-carro' %}
+
 <style>
   .personalizacao-container {
     background-color: #fff;
@@ -291,40 +292,6 @@
 <!-- === AQUI ENTRA O SCRIPT === -->
 <!-- ==== INÍCIO DO SCRIPT BOTÃO CONFIRMAR E EDITAR ==== -->
 <script>
-  function confirmarPersonalizacao() {
-    const marca = document.getElementById('marca').value;
-    const ano = document.getElementById('ano').value;
-    const modelo = document.getElementById('modelo').value;
-
-    if (marca === "" || ano === "" || modelo === "") {
-      alert("Por favor, preencha todas as informações antes de confirmar.");
-      return;
-    }
-
-    // Monta o texto de resumo
-    const resumo = `Veículo selecionado: ${marca} / ${ano} / ${modelo}`;
-
-    // Insere o texto no campo de resumo
-    document.getElementById('texto-resumo').innerText = resumo;
-
-    // Oculta o bloco de personalização
-    document.getElementById('bloco-personalizacao').style.display = 'none';
-
-    // Mostra a mensagem de sucesso + resumo + botão editar
-    document.getElementById('mensagem-sucesso').style.display = 'block';
-  }
-
-  function editarPersonalizacao() {
-    // Mostra novamente o formulário de personalização
-    document.getElementById('bloco-personalizacao').style.display = 'block';
-
-    // Oculta a mensagem de sucesso e o resumo
-    document.getElementById('mensagem-sucesso').style.display = 'none';
-  }
-</script>
-<!-- ==== FIM DO SCRIPT BOTÃO CONFIRMAR E EDITAR ==== -->
-
-
 
 {% endif %}
   <!-- FIM DO BOTÃO -->    
