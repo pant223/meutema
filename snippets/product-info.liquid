@@ -84,7 +84,7 @@
 
       {%- when 'separator' -%}
         <hr class="product-info__separator" {{ block.shopify_attributes }}>
-56
+
       {%- when 'description' -%}
         {%- if block.settings.collapse_content -%}
           {%- if product.description != blank -%}
@@ -99,6 +99,9 @@
               <div class="prose">
                 {{- product.description -}}
               </div>
+            
+            56
+            
             </div>
           {%- endif -%}
         {%- endif -%}
