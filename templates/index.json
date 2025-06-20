@@ -166,7 +166,7 @@
       "type": "scrolling-text",
       "settings": {
         "full_width": true,
-        "text": "Promotion text",
+        "text": "ESQUENTA DIA DOS PAIS",
         "text_size": "large",
         "text_style": "fill",
         "scrolling_mode": "auto",
@@ -236,7 +236,7 @@
         "subheading": "",
         "title": "Collection list",
         "content": "",
-        "link_url": "",
+        "link_url": "shopify://collections/cozinha",
         "link_text": "View all",
         "background": "",
         "background_gradient": "",
