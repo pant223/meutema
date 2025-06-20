@@ -241,11 +241,55 @@
   <button type="button" onclick="confirmarPersonalizacao()">Confirmar</button>
 </div>
 
-<!-- Mensagem de sucesso -->
-<div id="mensagem-sucesso" class="mensagem-sucesso">
-  ✅ Veículo selecionado com sucesso!
+<!-- === BLOCO DE PERSONALIZAÇÃO === -->
+<div id="bloco-personalizacao" class="personalizacao-container">
+  <h3>Personalize seu tapete</h3>
+
+  <!-- Marca -->
+  <label for="marca">Marca *</label>
+  <select id="marca" name="properties[Marca]" required>
+    <option value="">Selecione a marca</option>
+    <option>Fiat</option>
+    <option>Volkswagen</option>
+    <!-- (demais marcas aqui) -->
+  </select>
+
+  <!-- Ano -->
+  <label for="ano">Ano de Fabricação *</label>
+  <select id="ano" name="properties[Ano de Fabricação]" required>
+    <option value="">Selecione o ano</option>
+    <option>2025</option>
+    <option>2024</option>
+    <!-- (demais anos aqui) -->
+  </select>
+
+  <!-- Modelo -->
+  <label for="modelo">Modelo do Carro *</label>
+  <input type="text" id="modelo" name="properties[Modelo]" placeholder="Digite o modelo" required />
+
+  <!-- Botão Confirmar -->
+  <button type="button" onclick="confirmarPersonalizacao()">Confirmar</button>
 </div>
 
+<!-- === BLOCO DE MENSAGEM DE SUCESSO + RESUMO === -->
+<div id="mensagem-sucesso" class="mensagem-sucesso" style="display: none;">
+  ✅ Veículo selecionado com sucesso!<br>
+  <span id="texto-resumo" style="display:block; margin-top:5px; font-weight:600;"></span>
+  <button type="button" onclick="editarPersonalizacao()" style="
+    margin-top: 10px;
+    background-color: #111;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    ✏️ Editar
+  </button>
+</div>
+
+<!-- === AQUI ENTRA O SCRIPT === -->
+<!-- ==== INÍCIO DO SCRIPT BOTÃO CONFIRMAR E EDITAR ==== -->
 <script>
   function confirmarPersonalizacao() {
     const marca = document.getElementById('marca').value;
@@ -257,13 +301,29 @@
       return;
     }
 
-    // Oculta a caixa de personalização
+    // Monta o texto de resumo
+    const resumo = `Veículo selecionado: ${marca} / ${ano} / ${modelo}`;
+
+    // Insere o texto no campo de resumo
+    document.getElementById('texto-resumo').innerText = resumo;
+
+    // Oculta o bloco de personalização
     document.getElementById('bloco-personalizacao').style.display = 'none';
 
-    // Mostra a mensagem de sucesso
+    // Mostra a mensagem de sucesso + resumo + botão editar
     document.getElementById('mensagem-sucesso').style.display = 'block';
   }
+
+  function editarPersonalizacao() {
+    // Mostra novamente o formulário de personalização
+    document.getElementById('bloco-personalizacao').style.display = 'block';
+
+    // Oculta a mensagem de sucesso e o resumo
+    document.getElementById('mensagem-sucesso').style.display = 'none';
+  }
 </script>
+<!-- ==== FIM DO SCRIPT BOTÃO CONFIRMAR E EDITAR ==== -->
+
 
 
 {% endif %}
