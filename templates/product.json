@@ -22,6 +22,30 @@
             "heading_tag": "h2"
           }
         },
+        "badges": {
+          "type": "badges",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -31,16 +55,6 @@
             "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": ""
-          }
-        },
-        "badges": {
-          "type": "badges",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-            "show_taxes_notice": false
           }
         },
         "rating": {
@@ -62,34 +76,20 @@
           "settings": {
             "collapse_content": false
           }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "hide_sold_out_variants": false,
-            "stack_blocks": true,
-            "selector_mode": "block",
-            "color_mode": "color",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "buy_buttons",
         "badges",
+        "variant_picker",
+        "quantity_selector",
         "price",
+        "buy_buttons",
         "rating",
         "payment_terms",
         "separator",
-        "description",
-        "variant_picker",
-        "quantity_selector"
+        "description"
       ],
       "settings": {
         "full_width": true,
