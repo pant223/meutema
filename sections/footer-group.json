@@ -90,6 +90,7 @@
       "blocks": {
         "newsletter": {
           "type": "newsletter",
+          "disabled": true,
           "settings": {
             "image_width": 150,
             "heading_size": "h3",
@@ -100,15 +101,15 @@
         "links": {
           "type": "links",
           "settings": {
-            "menu": "footer",
+            "menu": "main-menu",
             "show_menu_title": true
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "title": "About",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "title": "Mais",
+            "content": "<p>Avenida Rondon Pacheco, 1020 Bairro Cazeca, Uberlândia - MG CEP 38400-015</p><p>Oferta exclusiva neste site oficial, sujeita a variação. Evite comprar produtos mais baratos ou de outras lojas, para evitar golpes. <strong>Não nos responsabilizamos por problemas em compras fora deste site.</strong></p>",
             "enable_follow_on_shop": true
           }
         }
